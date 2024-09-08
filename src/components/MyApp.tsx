@@ -2,7 +2,7 @@ import React from "react";
 import { RecoilRoot } from "recoil";
 import { App, SnackbarProvider, ZMPRouter } from "zmp-ui";
 import Authorize from "./authorize/Authorize";
-import AppRoutes from "../routes/routes";
+import Layout from "./layout/Layout";
 
 const MyApp = () => {
   return (
@@ -11,7 +11,7 @@ const MyApp = () => {
         <SnackbarProvider>
           <Authorize>
             <ZMPRouter>
-              <AppRoutes />
+              <Layout />
             </ZMPRouter>
           </Authorize>
         </SnackbarProvider>
