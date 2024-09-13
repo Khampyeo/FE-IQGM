@@ -1,12 +1,51 @@
+.page {
+  padding: 16px 16px 96px 16px;
+}
 
-    .page {
-      padding: 16px 16px 96px 16px;
-    }
+.section-container {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
 
-    .section-container {
-      padding: 16px;
-      background: #ffffff;
-      border-radius: 8px;
-      margin-bottom: 24px;
-    }
-    
+:root {
+  --primary: #1abb86;
+  --selected: #e5e7eb;
+
+  --text-primary: #333;
+  --text-secondary: #1abb86;
+  --text-hover: #1abb86;
+
+  --background: #fff;
+  --background-secondary: #f2f4f7;
+  --background-item: #b7dcfa;
+  --background-selected: #eff4fb;
+  --background-selected-2: #d8e8fd;
+
+  --border-primary: #ced0d4;
+}
+
+.dark {
+  --text-primary: #fff;
+  --text-secondary: #fff;
+  --text-hover: #fff;
+
+  --background: #242526;
+  --background-secondary: #18191a;
+  --background-item: #112545;
+  --background-selected: #555;
+  --background-selected-2: #555;
+
+  --border-primary: #3e4042;
+}
+
+.hidden-scrollbar {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Account from "@/pages/account/Account";
+import ChatBot from "@/pages/chatbot/ChatBot";
 import HomePage from "@/pages/homepage/Homepage";
 import NotFound from "@/pages/not-found/NotFound";
 import Promotion from "@/pages/promotion/Promotion";
@@ -13,6 +14,7 @@ const AppRoutes = () => {
       <Route path="/promotion" element={<Promotion />} />
       <Route path="/wallet" element={<Wallet />} />
       <Route path="/account" element={<Account />} />
+      <Route path="/chatbot" element={<ChatBot />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
