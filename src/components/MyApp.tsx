@@ -6,6 +6,7 @@ import Authorize from "./authorize/Authorize";
 import Layout from "./layout/Layout";
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
+import "@/../i18n";
 
 const MyApp = () => {
   return (

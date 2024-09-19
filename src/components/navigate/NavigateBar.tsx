@@ -10,7 +10,7 @@ const NavigateBar = () => {
 
   return (
     <div className="flex gap-2 justify-around bg-background-primary shadow-top-shadow">
-      {navigateItems.map((item) => (
+      {navigateItems().map((item) => (
         <div
           key={item.key}
           className={clsx(
@@ -19,7 +19,12 @@ const NavigateBar = () => {
               ? "text-primary"
               : "text-text-primary"
           )}
-          onClick={() => navigate(item.path)}
+          onClick={() =>
+            navigate(item.path, {
+              animate: false,
+              direction: "backward",
+            })
+          }
         >
           {location.pathname === item.path ? item.logoSelected : item.logo}
           <p>{item.label}</p>

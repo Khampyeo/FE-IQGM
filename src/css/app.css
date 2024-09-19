@@ -18,12 +18,13 @@
   --text-hover: #1abb86;
 
   --background: #fff;
+  --background-hover: #f2f4f7;
   --background-secondary: #f2f4f7;
   --background-item: #b7dcfa;
   --background-selected: #eff4fb;
   --background-selected-2: #d8e8fd;
 
-  --border-primary: #ced0d4;
+  --border-primary: #e5e7eb;
 }
 
 .dark {
@@ -32,6 +33,7 @@
   --text-hover: #fff;
 
   --background: #242526;
+  --background-hover: #f2f4f7;
   --background-secondary: #18191a;
   --background-item: #112545;
   --background-selected: #555;

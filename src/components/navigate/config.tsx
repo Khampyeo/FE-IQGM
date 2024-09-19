@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import AccountFilledIcon from "@/static/icons/icon_account__fill.svg";
 import AccountIcon from "@/static/icons/icon_account.svg";
 import HomeFilledIcon from "@/static/icons/icon_home__fill.svg";
@@ -15,33 +16,36 @@ type navigateItem = {
   label: string;
   path: string;
 };
-export const navigateItems: navigateItem[] = [
-  {
-    key: 0,
-    logo: <HomeIcon />,
-    logoSelected: <HomeFilledIcon />,
-    label: "Home",
-    path: "/",
-  },
-  {
-    key: 1,
-    logo: <PromotionIcon />,
-    logoSelected: <PromotionFilledIcon />,
-    label: "Promotion",
-    path: "/promotion",
-  },
-  {
-    key: 2,
-    logo: <WalletIcon />,
-    logoSelected: <WalletFilledIcon />,
-    label: "Wallet",
-    path: "/wallet",
-  },
-  {
-    key: 3,
-    logo: <AccountIcon />,
-    logoSelected: <AccountFilledIcon />,
-    label: "Account",
-    path: "/account",
-  },
-];
+export const navigateItems: () => navigateItem[] = () => {
+  const { t } = useTranslation();
+  return [
+    {
+      key: 0,
+      logo: <HomeIcon />,
+      logoSelected: <HomeFilledIcon />,
+      label: t("navigate_home"),
+      path: "/",
+    },
+    {
+      key: 1,
+      logo: <PromotionIcon />,
+      logoSelected: <PromotionFilledIcon />,
+      label: t("navigate_promotion"),
+      path: "/promotion",
+    },
+    {
+      key: 2,
+      logo: <WalletIcon />,
+      logoSelected: <WalletFilledIcon />,
+      label: t("navigate_wallet"),
+      path: "/wallet",
+    },
+    {
+      key: 3,
+      logo: <AccountIcon />,
+      logoSelected: <AccountFilledIcon />,
+      label: t("navigate_account"),
+      path: "/account",
+    },
+  ];
+};

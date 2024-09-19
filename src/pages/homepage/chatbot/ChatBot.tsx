@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Input } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import Toolbar from "@/components/toolbar/Toolbar";
@@ -29,16 +29,18 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="h-full flex flex-col py-2">
+    <div className="h-dvh flex flex-col py-2">
       <Toolbar name="Chatbot" pre="/" />
       <div className="flex-1 py-2 px-4">
-        {messages?.map((message: Message) =>
-          message.type === "bot" ? (
-            <BotMessage message={message.message} />
-          ) : (
-            <UserMessage message={message.message} />
-          )
-        )}
+        {messages?.map((message: Message, key: number) => (
+          <Fragment key={key}>
+            {message.type === "bot" ? (
+              <BotMessage message={message.message} />
+            ) : (
+              <UserMessage message={message.message} />
+            )}
+          </Fragment>
+        ))}
       </div>
       <div className="flex gap-2 py-3 px-4 border-t border-border-primary border-opacity-0">
         <div className="flex-1">

@@ -12,6 +12,7 @@ module.exports = {
 
         "background-primary": "var(--background)",
         "background-secondary": "var(--background-secondary)",
+        "background-hover": "var(--background-hover)",
 
         "border-primary": "var(--border-primary)",
       },
