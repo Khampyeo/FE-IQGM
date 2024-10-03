@@ -2,8 +2,9 @@ import React, { useRef } from "react";
 import { Carousel } from "@mantine/carousel";
 import { Input } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "zmp-ui";
-import { featureItems } from "./config";
+import { ads, featureItems } from "./config";
 import HeadphoneIcon from "@/static/icons/icon_headphone.svg";
 import NotifyIcon from "@/static/icons/icon_notify.svg";
 import QuestionIcon from "@/static/icons/icon_question__circle.svg";
@@ -12,6 +13,7 @@ import SearchIcon from "@/static/icons/icon_search.svg";
 const HomePage = () => {
   const navigate = useNavigate();
   const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const { t } = useTranslation();
 
   return (
     <div className="py-2 px-4">
@@ -26,7 +28,7 @@ const HomePage = () => {
               variant="filled"
               size="md"
               radius={"lg"}
-              placeholder="Search..."
+              placeholder={`${t("search")}...`}
               classNames={{ input: "!border-none" }}
             />
           </div>
@@ -34,10 +36,10 @@ const HomePage = () => {
         <NotifyIcon />
       </div>
       <div className="flex flex-wrap gap-4 mt-4">
-        {featureItems.map((item) => (
+        {featureItems().map((item) => (
           <div
             key={item.key}
-            className="group relative h-[172px] min-w-[150px] flex-1 rounded-lg overflow-hidden cursor-pointer"
+            className="group relative h-[196px] min-w-[150px] flex-1 rounded-lg overflow-hidden cursor-pointer"
             onClick={() =>
               navigate(item.path, { animate: true, direction: "forward" })
             }
@@ -48,8 +50,7 @@ const HomePage = () => {
               className="object-cover w-full h-full brightness-50 group-hover:brightness-75 transition-all"
             />
             <div className="absolute w-full bottom-4 flex flex-col items-center text-gray-200 ">
-              <p className="text-lg font-medium">{item.text}</p>
-              <p className="text-2xl font-bold">{item.emphasizeText}</p>
+              <p className="text-2xl font-bold">{item.text}</p>
             </div>
           </div>
         ))}
@@ -58,7 +59,7 @@ const HomePage = () => {
         <Carousel
           withControls={false}
           withIndicators
-          height={100}
+          height={200}
           slideSize="100%"
           slideGap="md"
           loop
@@ -69,9 +70,15 @@ const HomePage = () => {
           onMouseLeave={autoplay.current.reset}
           className="rounded-lg overflow-hidden"
         >
-          <Carousel.Slide className="bg-orange-200"></Carousel.Slide>
-          <Carousel.Slide className="bg-primary"></Carousel.Slide>
-          <Carousel.Slide className="bg-blue-200"></Carousel.Slide>
+          {ads.map((item) => (
+            <Carousel.Slide key={item.key}>
+              <img
+                src={item.img}
+                alt=""
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </Carousel.Slide>
+          ))}
         </Carousel>
       </div>
       <div className="mt-4 flex gap-4">

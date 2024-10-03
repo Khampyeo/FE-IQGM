@@ -6,12 +6,12 @@ export const languagesItems = () => {
   const languages = [
     {
       key: 0,
-      name: "English(US)",
+      name: t("language.en"),
       value: "en",
     },
     {
       key: 1,
-      name: t("language_vn"),
+      name: t("language.vn"),
       value: "vn",
     },
   ];

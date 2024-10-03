@@ -47,7 +47,7 @@ const ChatBot = () => {
           <form onSubmit={form.onSubmit(handleSubmit)}>
             <Input
               variant="filled"
-              size="sm"
+              size="md"
               radius={"lg"}
               placeholder="What do you want ask ?"
               classNames={{ input: "!border-none" }}

@@ -13,7 +13,7 @@ const QrReader = () => {
   const [qrOn, setQrOn] = useState<boolean>(true);
 
   const onScanSuccess = (result: QrScanner.ScanResult) => {
-    navigate("/");
+    navigate("/payment", { animate: true, direction: "forward" });
   };
 
   const onScanFail = (err: string | Error) => {
@@ -30,7 +30,7 @@ const QrReader = () => {
           returnDetailedScanResult: true,
         });
         if (result) {
-          navigate("/");
+          navigate("/payment", { animate: true, direction: "forward" });
         } else {
           alert("No QR code found in the image.");
         }

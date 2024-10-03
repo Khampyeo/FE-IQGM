@@ -11,7 +11,7 @@ const Layout = () => {
   return (
     <div className="flex flex-col h-dvh">
       <ScrollRestoration />
-      <div className="flex-1 overflow-y-auto bg-background-primary hidden-scrollbar">
+      <div className="flex-1 bg-background-primary hidden-scrollbar">
         <AppRoutes />
       </div>
       <div

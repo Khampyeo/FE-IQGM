@@ -1,12 +1,61 @@
 {
-  "navigate_home": "Home",
-  "navigate_promotion": "Promotion",
-  "navigate_wallet": "Wallet",
-  "navigate_account": "Account",
-
-  "language": "English",
-  "language_vn": "Vietnamese",
-  "account_vehicle": "My Vehicle",
-  "account_payment": "Payment Methods",
-  "account_language": "Languages"
+  "navigate": {
+    "home": "Home",
+    "promotion": "Promotion",
+    "wallet": "Wallet",
+    "account": "Account"
+  },
+  "home": {
+    "feature": {
+      "map": "Check on Map",
+      "qr": "QR Scan",
+      "assistant": "AI Assistant",
+      "hiring": "Hiring"
+    },
+    "guide": "Service Guide",
+    "support": "Customer Center"
+  },
+  "promotion": {
+    "search": "Find your promo...",
+    "enter_code": "Enter code",
+    "my_voucher": "My voucher",
+    "num_vouncher": "{{var}} vouncher",
+    "redeem_gift": "Redeem gift",
+    "credit": "Credit",
+    "see_all": "See all",
+    "expired_day": "Expired {{var}} days"
+  },
+  "wallet": {
+    "title": "Wallet",
+    "my_package": "My package",
+    "create_package": "Create a package",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "balance": "Balance",
+    "reward": "Reward credit",
+    "date": "Date",
+    "day": "days",
+    "personal_package": "Personal package list",
+    "register": "Register",
+    "expired": "expired in {{var}} days"
+  },
+  "day": "day",
+  "search": "Search",
+  "language": {
+    "current": "English(US)",
+    "vn": "Vietnamese",
+    "en": "English"
+  },
+  "account": {
+    "vehicle": "My Vehicle",
+    "payment": "Payment Methods",
+    "language": "Languages",
+    "personal": "Personal Info",
+    "security": "Security",
+    "dark_mode": "Dark Mode",
+    "help_center": "Help Center",
+    "privacy_policy": "Privacy Policy",
+    "about_EVPoint": "About EVPoint",
+    "logout": "Logout"
+  }
 }

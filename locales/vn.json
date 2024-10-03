@@ -1,12 +1,61 @@
 {
-  "navigate_home": "Nhà",
-  "navigate_promotion": "Ưu Đãi",
-  "navigate_wallet": "Ví",
-  "navigate_account": "Tài Khoản",
+  "navigate": {
+    "home": "Nhà",
+    "promotion": "Ưu Đãi",
+    "wallet": "Ví",
+    "account": "Tài Khoản"
+  },
+  "home": {
+    "feature": {
+      "map": "Tìm trên bản đồ",
+      "qr": "Quét mã QR",
+      "assistant": "Hỗ trợ AI",
+      "hiring": "Thuê xe"
+    },
+    "guide": "Hướng dẫn dịch vụ",
+    "support": "Trung tâm khách hàng"
+  },
+  "promotion": {
+    "search": "Tìm mã khuyến mãi...",
+    "enter_code": "Nhập mã",
+    "my_voucher": "Ưu đãi của tôi",
+    "num_vouncher": "{{var}} khuyến mãi",
+    "redeem_gift": "Đổi quà",
+    "credit": "Đồng",
+    "see_all": "Xem tất cả",
+    "expired_day": "Hết hạn trong {{var}} ngày"
+  },
+  "wallet": {
+    "title": "Ví",
+    "my_package": "Gói của tôi",
+    "create_package": "Tạo gói",
+    "deposit": "Nạp tiền",
+    "withdraw": "Rút tiền",
+    "balance": "Số dư",
+    "reward": "Tiền thưởng",
+    "date": "Ngày",
+    "day": "ngày",
+    "personal_package": "Danh sách gói cá nhân",
+    "register": "Đăng ký",
+    "expired": "hết hạn trong {{var}} ngày"
+  },
+  "search": "Tìm",
 
-  "language": "Tiếng Việt",
-  "language_vn": "Tiếng Việt",
-  "account_vehicle": "Phương Tiện",
-  "account_payment": "Thanh Toán",
-  "account_language": "Ngôn Ngữ"
+  "language": {
+    "current": "Tiếng Việt",
+    "vn": "Tiếng Việt",
+    "en": "Tiếng Anh"
+  },
+  "account": {
+    "vehicle": "Phương Tiện",
+    "payment": "Thanh Toán",
+    "language": "Ngôn Ngữ",
+    "personal": "Thông Tin Cá Nhân",
+    "security": "Bảo Mật",
+    "dark_mode": "Chế Độ Tối",
+    "help_center": "Trung Tâm Trợ Giúp",
+    "privacy_policy": "Chính Sách Bảo Mật",
+    "about_EVPoint": "Về EVPoint",
+    "logout": "Đăng Xuất"
+  }
 }
