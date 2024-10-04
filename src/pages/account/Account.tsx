@@ -43,7 +43,7 @@ const Account = () => {
           ) : (
             <div
               key={key}
-              className="flex gap-5 items-center px-4 py-3 hover:bg-background-hover cursor-pointer transition-all"
+              className="flex gap-5 items-center p-4 hover:bg-background-hover cursor-pointer transition-all"
               onClick={() =>
                 navigate(item.path, { animate: true, direction: "forward" })
               }
@@ -62,7 +62,7 @@ const Account = () => {
           )
         )}
         <div
-          className="flex gap-5 items-center px-4 py-3 hover:bg-background-hover cursor-pointer transition-all"
+          className="flex gap-5 items-center p-4 hover:bg-background-hover cursor-pointer transition-all"
           onClick={() => navigate("", { animate: true, direction: "forward" })}
         >
           <div className="flex gap-2 text-red-600 items-center">

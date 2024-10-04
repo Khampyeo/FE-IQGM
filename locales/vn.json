@@ -7,10 +7,10 @@
   },
   "home": {
     "feature": {
-      "map": "Tìm trên bản đồ",
+      "map": "Tìm Điểm Sạc",
       "qr": "Quét mã QR",
-      "assistant": "Hỗ trợ AI",
-      "hiring": "Thuê xe"
+      "assistant": "Trợ Lý AI",
+      "hiring": "Thuê Xe Điện"
     },
     "guide": "Hướng dẫn dịch vụ",
     "support": "Trung tâm khách hàng"

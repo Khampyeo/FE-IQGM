@@ -7,7 +7,7 @@ import ScrollRestoration from "../scroll-restoration/ScrollRestoration";
 
 const Layout = () => {
   const location = useLocation();
-  const appRoutes = ["/", "/promotion", "/wallet", "/account"];
+  const appRoutes = ["/", "/promotion", "/wallet", "/account", "/home/map"];
   return (
     <div className="flex flex-col h-dvh">
       <ScrollRestoration />

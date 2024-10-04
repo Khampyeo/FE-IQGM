@@ -15,7 +15,10 @@ const NavigateBar = () => {
           key={item.key}
           className={clsx(
             "flex flex-1 flex-col justify-center items-center py-3 cursor-pointer hover:bg-selected transition-all",
-            location.pathname === item.path
+            (location.pathname === item.path && item.path === "/") ||
+              location.pathname.includes(
+                item.path === "/" ? "/home" : item.path
+              )
               ? "text-primary"
               : "text-text-primary"
           )}
@@ -26,7 +29,10 @@ const NavigateBar = () => {
             })
           }
         >
-          {location.pathname === item.path ? item.logoSelected : item.logo}
+          {(location.pathname === item.path && item.path === "/") ||
+          location.pathname.includes(item.path === "/" ? "/home" : item.path)
+            ? item.logoSelected
+            : item.logo}
           <p>{item.label}</p>
         </div>
       ))}

@@ -3,9 +3,9 @@
   "app": {
     "title": "IQ-GreenMove",
     "headerTitle": "IQ-GreenMove",
-    "headerColor": "#1843EF",
-    "textColor": "white",
-    "statusBarColor": "#1843EF",
+    "headerColor": "white",
+    "textColor": "black",
+    "statusBarColor": "black",
     "leftButton": "back",
     "statusBar": "normal",
     "actionBarHidden": true,

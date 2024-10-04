@@ -2,6 +2,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./css/tailwind.css";
+import "@mantine/dates/styles.css";
 import "zmp-ui/zaui.css";
 import "./css/app.css";
 import MyApp from "./components/MyApp";

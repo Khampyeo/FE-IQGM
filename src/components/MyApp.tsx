@@ -1,5 +1,5 @@
 import React from "react";
-import { MantineProvider } from "@mantine/core";
+import { createTheme, MantineProvider } from "@mantine/core";
 import { RecoilRoot } from "recoil";
 import { App, SnackbarProvider, ZMPRouter } from "zmp-ui";
 import Authorize from "./authorize/Authorize";

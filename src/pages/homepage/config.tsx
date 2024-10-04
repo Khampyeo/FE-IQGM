@@ -16,7 +16,7 @@ export const featureItems = () => {
       key: 0,
       img: mapImage,
       text: t("home.feature.map"),
-      path: "/map",
+      path: "/home/map",
     },
     {
       key: 1,

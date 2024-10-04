@@ -7,10 +7,10 @@
   },
   "home": {
     "feature": {
-      "map": "Check on Map",
+      "map": "Find Charging Location",
       "qr": "QR Scan",
       "assistant": "AI Assistant",
-      "hiring": "Hiring"
+      "hiring": "E-Bike Rental"
     },
     "guide": "Service Guide",
     "support": "Customer Center"

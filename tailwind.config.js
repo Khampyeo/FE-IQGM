@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)",
+        primary: "#1abb86",
         selected: "var(--selected)",
         "text-primary": "var(--text-primary)",
 

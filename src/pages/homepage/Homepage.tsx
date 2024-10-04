@@ -50,7 +50,7 @@ const HomePage = () => {
               className="object-cover w-full h-full brightness-50 group-hover:brightness-75 transition-all"
             />
             <div className="absolute w-full bottom-4 flex flex-col items-center text-gray-200 ">
-              <p className="text-2xl font-bold">{item.text}</p>
+              <p className="text-2xl font-bold text-center">{item.text}</p>
             </div>
           </div>
         ))}
