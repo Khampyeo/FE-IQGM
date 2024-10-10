@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Flex } from "@mantine/core";
 import clsx from "clsx";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "zmp-ui";
@@ -9,12 +10,16 @@ const NavigateBar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex gap-2 justify-around bg-background-primary shadow-top-shadow">
+    <Flex
+      gap={8}
+      justify={"space-around"}
+      className="fixed bottom-0 left-0 w-dvw bg-background-primary border-t-2 z-50 shadow-top-shadow"
+    >
       {navigateItems().map((item) => (
         <div
           key={item.key}
           className={clsx(
-            "flex flex-1 flex-col justify-center items-center py-3 cursor-pointer hover:bg-selected transition-all",
+            "flex flex-1 flex-col justify-center items-center py-3 cursor-pointer transition-all",
             (location.pathname === item.path && item.path === "/") ||
               location.pathname.includes(
                 item.path === "/" ? "/home" : item.path
@@ -33,10 +38,10 @@ const NavigateBar = () => {
           location.pathname.includes(item.path === "/" ? "/home" : item.path)
             ? item.logoSelected
             : item.logo}
-          <p>{item.label}</p>
+          <p className="font-medium text-xs mt-1">{item.label}</p>
         </div>
       ))}
-    </div>
+    </Flex>
   );
 };
 export default NavigateBar;

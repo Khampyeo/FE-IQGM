@@ -2,6 +2,7 @@
   "navigate": {
     "home": "Nhà",
     "promotion": "Ưu Đãi",
+    "my_booking": "Hoạt Động",
     "wallet": "Ví",
     "account": "Tài Khoản"
   },
@@ -47,7 +48,7 @@
     "en": "Tiếng Anh"
   },
   "account": {
-    "vehicle": "Phương Tiện",
+    "vehicle": "Xe điện của tôi",
     "payment": "Thanh Toán",
     "language": "Ngôn Ngữ",
     "personal": "Thông Tin Cá Nhân",

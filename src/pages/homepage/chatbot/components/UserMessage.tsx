@@ -5,8 +5,8 @@ type Props = {
 };
 const UserMessage = ({ message }: Props) => {
   return (
-    <div className="w-full flex justify-end mb-1">
-      <div className="px-3 py-2 bg-primary rounded-3xl max-w-[90%] text-white">
+    <div className="w-full flex justify-end mb-1 mt-4">
+      <div className="px-3 py-1.5 bg-primary rounded-2xl max-w-[90%] text-white">
         <p className="text-sm">{message}</p>
       </div>
     </div>

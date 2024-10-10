@@ -7,19 +7,27 @@ import ScrollRestoration from "../scroll-restoration/ScrollRestoration";
 
 const Layout = () => {
   const location = useLocation();
-  const appRoutes = ["/", "/promotion", "/wallet", "/account", "/home/map"];
+  const appRoutes = [
+    "/",
+    "/promotion",
+    "/wallet",
+    "/account",
+    "/home/map",
+    "/my-booking",
+  ];
   return (
-    <div className="flex flex-col h-dvh">
+    <div className="h-dvh flex flex-col">
       <ScrollRestoration />
       <div className="flex-1 bg-background-primary hidden-scrollbar">
         <AppRoutes />
+        <div
+          className={clsx(
+            "h-16",
+            !appRoutes.includes(location.pathname) && "hidden"
+          )}
+        ></div>
       </div>
-      <div
-        className={clsx(
-          "mt-auto",
-          !appRoutes.includes(location.pathname) && "hidden"
-        )}
-      >
+      <div className={clsx(!appRoutes.includes(location.pathname) && "hidden")}>
         <NavigateBar />
       </div>
     </div>

@@ -3,6 +3,11 @@ import { initReactI18next } from "react-i18next";
 import en from "./locales/en.json";
 import vn from "./locales/vn.json";
 
+const getInitialLanguage = (): string => {
+  const savedLang = localStorage.getItem("appLanguage");
+  return savedLang ? savedLang : "en";
+};
+
 i18n.use(initReactI18next).init({
   resources: {
     en: {
@@ -12,7 +17,7 @@ i18n.use(initReactI18next).init({
       translation: vn,
     },
   },
-  lng: "en",
+  lng: getInitialLanguage(),
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

@@ -10,6 +10,7 @@ const Language = () => {
   const navigate = useNavigate();
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    localStorage.setItem("appLanguage", lng);
   };
 
   return (

@@ -13,18 +13,11 @@ const Account = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="h-[180px] bg-primary">
-        <img
-          src={backgroundImage}
-          alt=""
-          className="object-cover object-top w-full h-full"
-        />
-      </div>
-      <div className="px-4 py-2 flex gap-4 items-center">
+      <div className="px-4 py-2 flex gap-4 items-center mt-8">
         <div className="h-28 w-28 bg-slate-200 rounded-full overflow-hidden">
           <img src={userImage} alt="" className="object-cover w-full h-full" />
         </div>
-        <div className="">
+        <div>
           <p className="text-xl font-bold">Nguyen Van An</p>
           <p className="text-xs text-gray-400 font-medium mt-1">
             +84 328772456
@@ -34,11 +27,12 @@ const Account = () => {
           <RightChervonIcon />
         </div>
       </div>
+      <Divider mt={16} />
       <div className="py-2">
         {featureItems().map((item, key) =>
           item === "divider" ? (
             <div key={key} className="py-2">
-              <Divider />
+              <Divider mx={16} />
             </div>
           ) : (
             <div

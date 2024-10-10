@@ -2,6 +2,7 @@
   "navigate": {
     "home": "Home",
     "promotion": "Promotion",
+    "my_booking": "Booking",
     "wallet": "Wallet",
     "account": "Account"
   },
@@ -47,7 +48,7 @@
     "en": "English"
   },
   "account": {
-    "vehicle": "My Vehicle",
+    "vehicle": "My E-Bike",
     "payment": "Payment Methods",
     "language": "Languages",
     "personal": "Personal Info",

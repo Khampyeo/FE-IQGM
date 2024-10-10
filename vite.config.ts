@@ -7,6 +7,7 @@ export default () => {
   return defineConfig({
     root: "./src",
     base: "",
+
     plugins: [
       react(),
       svgr({

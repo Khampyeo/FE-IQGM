@@ -1,14 +1,42 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Input } from "@mantine/core";
+import { Button, Input, Text } from "@mantine/core";
 import { useForm } from "@mantine/form";
+import { useScrollIntoView } from "@mantine/hooks";
+import { useMutation } from "@tanstack/react-query";
+import { getAnswer } from "@/apis/chatbot.api";
 import Toolbar from "@/components/toolbar/Toolbar";
+import { Answer } from "@/types/chatbot.type";
 import BotMessage from "./components/BotMessage";
 import UserMessage from "./components/UserMessage";
 import ArrowIcon from "@/static/icons/icon_arrow__right.svg";
 
 const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([]);
+  const { scrollIntoView, targetRef, scrollableRef } = useScrollIntoView<
+    HTMLDivElement,
+    HTMLDivElement
+  >();
 
+  useEffect(() => {
+    scrollIntoView();
+  }, [messages, scrollIntoView]);
+
+  const getAnswerMutation = useMutation({
+    mutationFn: (question: string) => getAnswer(question),
+    onSuccess: (answer: Answer) => {
+      const newMessages = [...messages];
+      newMessages.push({ type: "bot", message: answer.content[0].text });
+      setMessages(newMessages);
+    },
+    onError: () => {
+      const newMessages = [...messages];
+      newMessages.push({
+        type: "bot",
+        message: "Something went wrong, please ask again!",
+      });
+      setMessages(newMessages);
+    },
+  });
   const form = useForm({
     initialValues: {
       message: "",
@@ -20,18 +48,19 @@ const ChatBot = () => {
   });
   const handleSubmit = (values) => {
     const newMessages = [...messages];
-    newMessages.push(
-      { type: "user", message: values.message },
-      { type: "bot", message: values.message }
-    );
+    newMessages.push({ type: "user", message: values.message });
     setMessages(newMessages);
+    getAnswerMutation.mutate(values.message);
     form.reset();
   };
 
   return (
     <div className="h-dvh flex flex-col py-2">
       <Toolbar name="Chatbot" pre="/" />
-      <div className="flex-1 py-2 px-4">
+      <div
+        ref={scrollableRef}
+        className="flex-1 overflow-y-scroll hidden-scrollbar py-2 px-4"
+      >
         {messages?.map((message: Message, key: number) => (
           <Fragment key={key}>
             {message.type === "bot" ? (
@@ -41,8 +70,9 @@ const ChatBot = () => {
             )}
           </Fragment>
         ))}
+        <div ref={targetRef}></div>
       </div>
-      <div className="flex gap-2 py-3 px-4 border-t border-border-primary border-opacity-0">
+      <div className="w-full bg-white flex gap-2 py-3 px-4 border-t border-border-primary border-opacity-0">
         <div className="flex-1">
           <form onSubmit={form.onSubmit(handleSubmit)}>
             <Input

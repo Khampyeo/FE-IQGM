@@ -10,6 +10,7 @@ import Detail from "@/pages/homepage/map/detail/Detail";
 import Map from "@/pages/homepage/map/Map";
 import Payment from "@/pages/homepage/payment/Payment";
 import QrReader from "@/pages/homepage/qr-reader/QRReader";
+import MyBooking from "@/pages/my-booking/MyBooking";
 import NotFound from "@/pages/not-found/NotFound";
 import Promotion from "@/pages/promotion/Promotion";
 import Wallet from "@/pages/wallet/Wallet";
@@ -21,6 +22,7 @@ const AppRoutes = () => {
       <Route path="/promotion" element={<Promotion />} />
       <Route path="/wallet" element={<Wallet />} />
       <Route path="/account" element={<Account />} />
+      <Route path="/my-booking" element={<MyBooking />} />
       <Route path="/chatbot" element={<ChatBot />} />
       <Route path="/qrcode" element={<QrReader />} />
       <Route path="/home/map" element={<Map />} />
