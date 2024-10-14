@@ -10,6 +10,14 @@ export default () => {
 
     plugins: [
       react(),
+      {
+        name: "override-config",
+        config: () => ({
+          build: {
+            target: "esnext",
+          },
+        }),
+      },
       svgr({
         svgrOptions: {
           exportType: "default",
